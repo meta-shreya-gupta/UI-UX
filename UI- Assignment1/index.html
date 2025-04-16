@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metacube Parking System</title>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1>WELCOME TO METACUBE PARKING SYSTEM</h1>
+        </center>
+    </div>
+    <!--Navbar with Add Employee , Add Vehicle , Give Feedback , Pricing-->
+    <nav class="navbar">
+        <a href="#employee">Add Employee</a>
+        <a href="#vehicle">Add Vehicle</a>
+        <a href="#feedback">Give Feedback</a>
+        <a href="#prices">Pricing</a>
+    </nav>
+    <img src="./cover image.jpg" alt="metacube parking cover image" style="width: 100%; height: auto;">
+    <section id="employee">
+        <div>
+            <center>
+                <h2>Add Employee</h2>
+            </center>
+            <!--form to add employee-->
+            <form action="" autocomplete="off">
+                <label for="name">Full Name :</label>
+                <input type="text" id="name" name="fname" required placeholder="Enter name"><br><br>
+
+                <label for="gender">Gender :</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="gender">Female</label>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="gender">Other</label><br><br>
+
+                <label for="email">Email Id :</label>
+                <input type="email" name="email" id="email" required placeholder="Enter email"><br><br>
+
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" required placeholder="Enter Password"><br><br>
+
+                <label for="">Confirm Password :</label>
+                <input type="password" name="password" id="password" required placeholder="Re-enter Password"><br><br>
+                <label for="">Contact Number :</label>
+                <input type="tel" maxlength="10" minlength="10" placeholder="Enter Contact number"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+    <section id="vehicle">
+        <div>
+            <center>
+                <h2>Add Vehicle</h2>
+            </center>
+            <!--form to add vehicle details-->
+            <form action="" autocomplete="off">
+                <label for="make">Vehicle-Make(Company) :</label>
+                <input type="text" id="make" name="make" required placeholder="Enter company name"><br><br>
+
+                <label for="model">Model :</label>
+                <input type="text" name="model" id="model" required placeholder="Enter Model"><br><br>
+
+                <label for="type">Type :</label>
+                <select name="type" id="type">
+                    <option value="">--Select--</option>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Scooter">Scooter</option>
+                </select>
+
+                <label for="number">Vehicle Number :</label>
+                <input type="text" name="number" id="number" required placeholder="Enter Vehicle Number"><br><br>
+
+                <label for="empid">Employee Id :</label>
+                <input type="text" name="empid" id="empid" required placeholder="Enter employee id"><br><br>
+
+                <label for="identification">Identification :</label>
+                <textarea name="identification" id="identification" required
+                    placeholder="Color , mark , visible accessory etc.." rows="3"></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <div>
+            <center>
+                <h2>Get In Touch </h2>
+            </center>
+            <!--From to send feedback to a mail id-->
+            <form action="">
+                <input type="text" id="name" name="fname" required placeholder="Name"><br><br>
+
+                <input type="email" name="email" id="email" required placeholder="Email"><br><br>
+
+                <input type="text" name="subject" id="subject" required placeholder="Subject"><br><br>
+
+                <textarea name="message" id="message" required placeholder="Message..."></textarea><br><br>
+
+                <button type="submit">Send Email -></button>
+            </form>
+        </div>
+    </section>
+    <!--Specifies price ranges according to the type of vehicle-->
+    <section id="prices">
+        <center>
+            <h2>Pricing Range</h2>
+        </center>
+        <section id="cycle">
+            <div>
+                <center><b>CYCLE</b></center>
+            </div>
+            <div>
+                <center>$5 Daily</center>
+                <center>$100 Monthly</center>
+                <center>$500 Yearly</center>
+            </div>
+        </section>
+        <section id="motorcycle">
+            <div>
+                <center><b>MOTOR CYCLE</b></center>
+            </div>
+            <div>
+                <center>$10 Daily</center>
+                <center>$200 Monthly</center>
+                <center>$1000 Yearly</center>
+            </div>
+        </section>
+        <section id="four wheelers">
+            <div>
+                <center><b>FOUR WHEELERS</b></center>
+            </div>
+            <div>
+                <center>$20 Daily</center>
+                <center>$500 Monthly</center>
+                <center>$3500 Yearly</center>
+            </div>
+        </section>
+
+    </section>
+</body>
+
+</html>
