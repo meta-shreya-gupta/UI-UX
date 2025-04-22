@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metacube Parking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <!--Navbar with Add Employee , Add Vehicle , Give Feedback , Pricing-->
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <span class="logo-first">meta</span><span class="logo-second">cube</span>
+            </div>
+            <div class="navlist">
+                <ul class="navbarlist">
+                    <li><a href="#employee">Add Employee</a></li>
+                    <li><a href="#vehicle">Add Vehicle</a></li>
+                    <li><a href="#feedback">Give Feedback</a></li>
+                    <li><a href="#prices">Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cover">
+        <div class="message">
+            <h1>WELCOME TO METACUBE PARKING SYSTEM</h1>
+        </div>
+        <img src="./cover image.jpg" alt="metacube parking cover image">
+    </div>
+
+
+    <section id="employee">
+
+        <center class="header">
+            <h2>Add Employee</h2>
+        </center>
+        <!--form to add employee-->
+        <div class="element">
+            <div class="element-form">
+                <form action="" autocomplete="off">
+                    <div class="form-element">
+                        <label class="form-label" for="name">Full Name :</label>
+                        <input class="text-input" type="text" id="name" name="fname" required placeholder="Enter name">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="gender">Gender :</label>
+                        <div class="radio-group">
+                            <label for="male"><input type="radio" name="gender" value="male" id="male" required>Male</label>
+                            
+                            <label for="female"><input type="radio" name="gender" value="female" id="female">Female</label>
+                            
+                            <label for="other"><input type="radio" name="gender" value="other" id="other">Other</label>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="email">Email Id :</label>
+                        <input type="email" class="text-input" name="email" id="email" required placeholder="Enter email">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="password">Password :</label>
+                        <input type="password" class="text-input" name="password" id="password" required placeholder="Enter Password">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="">Confirm Password :</label>
+                        <input type="password" class="text-input" name="password" id="password" required placeholder="Re-enter Password">
+                    </div>
+                    <br><br>
+                    <div class="form-element">
+                        <label class="form-label" for="">Contact Number :</label>
+                        <input type="tel" class="text-input" maxlength="10" minlength="10" placeholder="Enter Contact number">
+                    </div>
+                    <br><br>
+
+                    <div class="button-element">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="element-image">
+                <img src="employee.png" alt="employee-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="vehicle">
+
+        <center class="header">
+            <h2>Add Vehicle</h2>
+        </center>
+        <!--form to add vehicle details-->
+        <div class="element">
+            <div class="element-form">
+                <form action="" autocomplete="off">
+                    <div class="form-element">
+                        <label class="form-label" for="make">Vehicle-Make(Company) :</label>
+                        <input type="text" class="text-input" id="make" name="make" required
+                            placeholder="Enter company name">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="model">Model :</label>
+                        <input type="text" class="text-input" name="model" id="model" required
+                            placeholder="Enter Model">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="type">Type :</label>
+                        <select name="type" id="type" class="text-input">
+                            <option value="">--Select--</option>
+                            <option value="Car">Car</option>
+                            <option value="Bike">Bike</option>
+                            <option value="Scooter">Scooter</option>
+                        </select>
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="number">Vehicle Number :</label>
+                        <input type="text" class="text-input" name="number" id="number" required
+                            placeholder="Enter Vehicle Number">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="empid">Employee Id :</label>
+                        <input type="text" class="text-input" name="empid" id="empid" required
+                            placeholder="Enter employee id">
+                    </div>
+                    <br><br>
+
+                    <div class="form-element">
+                        <label class="form-label" for="identification">Identification :</label>
+                        <textarea name="identification" class="text-input-large" id="identification" required
+                            placeholder="Color , mark , visible accessory etc.." rows="4" ></textarea>
+                    </div>
+                    <br><br>
+
+                    <div class="button-element">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="element-image">
+                <img src="vehicle.png" alt="vehicle-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback">
+
+        <center class="header">
+            <h2>Get In Touch </h2>
+        </center>
+        <!--From to send feedback to a mail id-->
+        <div class="element">
+            <div class="element-form">
+                <form action="">
+                    <div class="form-element">
+                        <input type="text" class="text-input" id="name" name="fname" required placeholder="Name">
+                    </div><br><br>
+
+                    <div class="form-element">
+                        <input type="email" name="email" class="text-input" id="email" required placeholder="Email">
+                    </div><br><br>
+
+                    <div class="form-element">
+                        <input type="text" class="text-input" name="subject" id="subject" required
+                            placeholder="Subject">
+                    </div><br><br>
+
+                    <div class="form-element">
+                        <textarea name="message" class="text-input-large" id="message" required rows="4" placeholder="Message..."></textarea>
+                    </div><br><br>
+
+                    <div class="button-element">
+                        <button type="submit">Send Email -></button>
+                    </div>
+                </form>
+            </div>
+            <div class="element-image">
+                <img src="feedback.jpg" alt="feedback">
+            </div>
+
+        </div>
+    </section>
+    <!--Specifies price ranges according to the type of vehicle-->
+    <section id="prices" class="pricing-container">
+        <center class="header">
+            <h2>Pricing Range</h2>
+        </center>
+        <div class="pricing-section">
+            <div class="pricing-block">
+                <div class="heading">
+                    <h3>CYCLE</h3>
+                </div>
+                <div class="pricing-circle">
+                    <img src="cycle.png" alt="cycle">
+                </div>
+                <div class="details">
+                    $5 Daily<br>
+                    $100 Monthly<br>
+                    $500 Yearly<br>
+                </div>
+                <div class="purchase-btn">
+                    <button class="btn">Purchase Now</button>
+                </div>
+            </div>
+            <div class="pricing-block">
+                <div class="heading">
+                    <h3>MOTOR CYCLE</h3>
+                </div>
+                <div class="pricing-circle">
+                    <img src="motorcycle.png" alt="motorcycle">
+                </div>
+                <div class="details">
+                    $10 Daily<br>
+                    $200 Monthly<br>
+                    $1000 Yearly<br>
+                </div>
+                <div class="purchase-btn">
+                    <button class="btn">Purchase Now</button>
+                </div>
+            </div>
+            <div class="pricing-block">
+                <div class="heading">
+                    <h3>FOUR WHEELERS</h3>
+                </div>
+                <div class="pricing-circle">
+                    <img src="four-wheelers.jpg" alt="four-wheelers">
+                </div>
+                <div class="details">
+                    $20 Daily<br>
+                    $500 Monthly<br>
+                    $3500 Yearly<br>
+                </div>
+                <div class="purchase-btn">
+                    <button class="btn">Purchase Now</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
