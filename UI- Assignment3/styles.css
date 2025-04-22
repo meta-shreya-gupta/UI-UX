@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-image: url(bodybg.png);
+}
+.top-section{
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    display: block;
+    position: relative;
+}
+.top-section img{
+    width: 100%;
+    height: fit-content;
+    display: block;
+}
+.top-content{
+    padding: 20px 50px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+    padding-left: 90px;
+}
+.nav-lists{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-lists a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 20px;
+}
+.nav-lists a:hover{
+    color: yellow;
+    font-size: 110%;
+}
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 90px;
+}
+.social-links a{
+    padding-left: 30px;
+}
+.fa{
+    text-decoration: none;
+    font-size: 20px;
+}
+.fa-facebook , .fa-instagram , .fa-google{
+    color: white;
+}
+.fa:hover{
+    font-size: 22px;
+}
+.fa-facebook:hover , .fa-instagram:hover , .fa-google:hover{
+    color: yellow;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+.left-content{
+    margin: 100px;
+    font-size: 30px;
+    width: 50%;
+}
+.left-content h1{
+    color: white;
+    font-size: 60px;
+}
+.left-section-buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.button1{
+    color: white;
+    background-color: rgb(242, 87, 87);
+    border: none;
+    height: 40px;
+    width: 100px;
+    margin-right: 20px;
+}
+.button1:hover{
+    box-shadow: 4px 4px 10px 2px black;
+}
+.button2{
+    color: white;
+    background-color: rgb(47, 47, 205);
+    border: none;
+    height: 40px;
+    width: 100px;
+}
+.button2:hover{
+    box-shadow: 4px 4px 10px 2px black;
+}
+.right-content{
+    width: 50%;
+}
+.right-content img{
+    height: 500px;
+    width: 450px;
+    margin-top: 70px;
+}
+.section-heading{
+    text-align: center;
+}
+.section-heading h2{
+    color: rgb(57, 130, 254);
+    font-size: 37px;
+}
+.section-heading p{
+    color: grey;
+    font-size: 20px;
+}
+.first-section{
+    padding: 20px 50px;
+}
+.section-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px;
+}
+.section-content-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+.section-text h2{
+    color: rgb(63,60,60);
+    font-size: 30px;
+}
+.section-text p{
+    color: grey;
+    font-size: 20px;
+}
+.section-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 100px;
+    perspective: 1000px;
+}
+.section-image-1{
+    transform: rotateY(25deg);
+    z-index: 1;
+    margin-right: -100px;
+}
+.section-image-2{
+    transform: rotateY(25deg);
+    z-index: 2;
+    margin-right: -100px;
+}
+.section-image-3{
+    transform: rotateY(0deg);
+    z-index: 3;
+    margin-right: -100px;
+}
+.section-image-4{
+    transform: rotateY(-25deg);
+    z-index: 2;
+    margin-right: -100px;
+}
+.section-image-5{
+    transform: rotateY(-25deg);
+    z-index: 1;
+}
+.second-section{
+    margin: 20px 50px;
+}
+.second-section-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 50px 150px 50px;
+}
+.left-section{
+    width: 50%;
+}
+.align{
+    margin-left: 150px;
+}
+.left-section p{
+    transform: rotate(90deg);
+    display: flex;
+    position: absolute;
+    color: rgb(218, 216, 216);
+    font-size: 140px;
+    padding-top: 140px;
+    padding-left: 140px;
+}
+.left-section img{
+    position: relative;
+    z-index: 1;
+    height: 400px;
+}
+.right-section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.right-section img{
+    height: auto;
+    width: 60px;
+    margin: 20px 0px 10px 10px;
+}
+.right-section h3{
+    margin: 20px 0px 0px 10px;
+    color: rgb(15, 14, 14);
+    font-size: 30px;
+}
+.right-section p{
+    margin: 10px 0px 10px 10px;
+    color: grey;
+    padding-right: 100px;
+    font-size: 20px;
+}
+.third-section{
+    margin: 20px 50px;
+}
+.review-section-content{
+    margin: 150px;
+}
+.review-section{
+    width: 900px;
+    margin: 0px 200px;
+    height: 500px;
+}
+.colon-begin,.colon-end{
+    font-size: 55px;
+    color:rgb(102, 132, 255);
+    
+}
+.colon-end{
+    text-align: right;
+}
+.review-1{
+    display: flex;
+    flex-direction: row;
+    gap:25px;
+}
+.author-1,.author-2{
+    width: 50%;
+    margin-right: 50px;
+}
+.review-2{
+    display: flex;
+    flex-direction: row;
+    gap:25px;
+}
+.thought{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+footer{
+    background-color: rgb(108, 169, 255);
+    width: 100vw;
+}
+.left-footer-section{
+    margin-right: 250px;
+}
+.left-footer-section-content h3{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.left-footer-section-content p{
+    color: white;
+}
+.left-section-footer-image{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.left-section-footer-image img{
+    margin: 0px 20px;
+}
+.footer-background{
+    display: flex;
+    flex-direction: row;
+    padding: 100px 300px 0px 100px;
+}
+.right-footer-section{
+    margin-bottom: 0px;
+}
+.right-footer-section img{
+    height: 300px;
+    width: 400px;
+}
+.footer-content{
+    background-color: rgb(51, 52, 55);
+    padding: 30px 120px 0px 100px;
+    width: 100vw;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-lists{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-lists a{
+    text-decoration: none;
+    color: grey;
+    margin: 0px 20px;
+}
+hr{
+    background-color: gray;
+    border: none;
+    height: 1px;
+    margin: 30px 0px;
+}
+.footer-content p{
+    color: grey;
+    text-align: center;
+    padding-bottom: 50px;
+}
