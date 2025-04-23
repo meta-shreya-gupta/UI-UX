@@ -385,14 +385,14 @@ footer{
     padding: 100px 300px 0px 100px;
 }
 .right-footer-section{
-    margin-bottom: 0px;
+    margin-bottom: -4px;
 }
 .right-footer-section img{
     height: 300px;
     width: 550px;
 }
 .footer-content{
-    background-color: rgb(51, 52, 55);
+    background-color: rgb(60, 64, 73);
     padding: 30px 120px 0px 100px;
     width: 100vw;
 }
