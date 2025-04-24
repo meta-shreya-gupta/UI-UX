@@ -1,0 +1,48 @@
+body {
+    font-family: "Playfair Display", serif;
+}
+
+/*Navbar custom styling*/
+.logo-text {
+    font-size: 35px;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/*Banner custom styling*/
+p {
+    font-family: "Arial", Times, serif;
+    color: rgb(113, 107, 107);
+}
+
+/*Thumbnail custom styling*/
+.thumbnail {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.about p{
+    font-size: 20px;
+}
+
+
+.recent-post-image{
+    background-color: grey;
+}
