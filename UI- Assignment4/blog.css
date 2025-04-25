@@ -32,17 +32,16 @@ p {
 
 /*Thumbnail custom styling*/
 .thumbnail {
-    background-color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(75, 72, 72);
+    text-align: center;
+    align-content: center;
     color: white;
 }
-.about p{
+
+.about p {
     font-size: 20px;
 }
 
-
-.recent-post-image{
+.recent-post-image {
     background-color: grey;
 }
