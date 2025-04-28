@@ -1,0 +1,70 @@
+/* side navbar custom styling */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+/* custom css for list items on sidebar navigation */
+ul {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* custom styling for top nav items */
+img {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 1px dotted grey;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-item {
+    font-size: 14px;
+}
+
+.item-content p:nth-of-type(2) {
+    color: grey;
+}
+
+/* custom styling of cards */
+.twitter-view {
+    justify-content: space-between;
+}
+
+.twitter-view h6 {
+    font-size: 45px;
+    color: white;
+}
+
+.twitter-view p {
+    font-size: 15px;
+    color: white;
+}
+
+
+
+.User-table {
+    overflow-y: scroll;
+    height: 21.5rem;
+    scrollbar-color: gray transparent;
+    scrollbar-width: thin;
+}
