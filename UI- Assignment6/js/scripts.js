@@ -8,6 +8,12 @@ function showNextStep(){
         next.style.display = 'block';
         currentStep ++;
     }
+    else if(currentStep == 6){
+        document.getElementById('employee-form').style.display = 'none';
+        document.getElementById('vehicle-form').style.display = 'flex';
+        document.getElementById('step-7').style.display = 'block';
+        currentStep=7 ;
+    }
 }
 //event listener for full name
 document.getElementById('name').addEventListener('keydown' , function(e) {
@@ -24,3 +30,71 @@ genderRadios.forEach(radio =>{
     });
 });
 //event listener for email 
+document.getElementById('email').addEventListener('keydown' , function(e) {
+    if(e.key == 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    }
+}); 
+
+//event listener for password 
+document.getElementById('password').addEventListener('keydown' , function(e) {
+    if(e.key == 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    }
+}); 
+
+//event listener for email 
+document.getElementById('confirmPassword').addEventListener('keydown' , function(e) {
+    if(e.key == 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    }
+}); 
+//event listener for contact number 
+document.getElementById('contact').addEventListener('keydown' , function(e) {
+    if(e.key == 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    }
+}); 
+
+document.getElementById('make').addEventListener('change' , function(){
+    showNextStep();
+});
+
+document.getElementById('model').addEventListener('keydown' , function(e){
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    } 
+});
+
+document.getElementById('type').addEventListener('keydown' , function(e){
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    } 
+});
+
+document.getElementById('number').addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    } 
+});
+
+document.getElementById('empId').addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        showNextStep();
+    } 
+});
+
+document.getElementById('identification').addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        alert("Vehicle form completed");
+    } 
+});

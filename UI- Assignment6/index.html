@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metacube Parking System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <div class="message">
             <h1>WELCOME TO METACUBE PARKING SYSTEM</h1>
         </div>
-        <img src="./cover image.jpg" alt="metacube parking cover image">
+        <img src="images/cover image.jpg" alt="metacube parking cover image">
     </div>
 
 
@@ -42,7 +42,7 @@
             <h2>Add Employee</h2>
         </center>
         <!--form to add employee-->
-        <div class="element">
+        <div class="element" id="employee-form">
             <div class="element-form">
                 <form action="" autocomplete="off">
                     <div class="form-element" id="step-1">
@@ -77,12 +77,12 @@
 
                     <div class="form-element" id="step-5" style="display: none;">
                         <label class="form-label" for="">Confirm Password :</label>
-                        <input type="password" class="text-input" name="password" id="password" required placeholder="Re-enter Password">
+                        <input type="password" class="text-input" name="password" id="confirmPassword" required placeholder="Re-enter Password">
                     </div>
                     <br><br>
                     <div class="form-element" id="step-6" style="display: none;">
                         <label class="form-label" for="">Contact Number :</label>
-                        <input type="tel" class="text-input" maxlength="10" minlength="10" placeholder="Enter Contact number">
+                        <input type="tel" class="text-input" id="contact" maxlength="10" minlength="10" placeholder="Enter Contact number">
                     </div>
                     <br><br>
 
@@ -92,7 +92,7 @@
                 </form>
             </div>
             <div class="element-image">
-                <img src="employee.png" alt="employee-image">
+                <img src="images/employee.png" alt="employee-image">
             </div>
         </div>
     </section>
@@ -103,24 +103,24 @@
             <h2>Add Vehicle</h2>
         </center>
         <!--form to add vehicle details-->
-        <div class="element">
+        <div class="element" id="vehicle-form" style="display: none;">
             <div class="element-form">
                 <form action="" autocomplete="off">
-                    <div class="form-element">
+                    <div class="form-element" id="step-7" style="display: none;">
                         <label class="form-label" for="make">Vehicle-Make(Company) :</label>
                         <input type="text" class="text-input" id="make" name="make" required
                             placeholder="Enter company name">
                     </div>
                     <br><br>
 
-                    <div class="form-element">
+                    <div class="form-element" id="step-8" style="display: none;">
                         <label class="form-label" for="model">Model :</label>
                         <input type="text" class="text-input" name="model" id="model" required
                             placeholder="Enter Model">
                     </div>
                     <br><br>
 
-                    <div class="form-element">
+                    <div class="form-element" id="step-9" style="display: none;">
                         <label class="form-label" for="type">Type :</label>
                         <select name="type" id="type" class="text-input">
                             <option value="">--Select--</option>
@@ -131,21 +131,21 @@
                     </div>
                     <br><br>
 
-                    <div class="form-element">
+                    <div class="form-element" id="step-10" style="display: none;">
                         <label class="form-label" for="number">Vehicle Number :</label>
                         <input type="text" class="text-input" name="number" id="number" required
                             placeholder="Enter Vehicle Number">
                     </div>
                     <br><br>
 
-                    <div class="form-element">
+                    <div class="form-element" id="step-11" style="display: none;">
                         <label class="form-label" for="empid">Employee Id :</label>
                         <input type="text" class="text-input" name="empid" id="empid" required
                             placeholder="Enter employee id">
                     </div>
                     <br><br>
 
-                    <div class="form-element">
+                    <div class="form-element" id="step-12" style="display: none;">
                         <label class="form-label" for="identification">Identification :</label>
                         <textarea name="identification" class="text-input-large" id="identification" required
                             placeholder="Color , mark , visible accessory etc.." rows="4" ></textarea>
@@ -158,7 +158,7 @@
                 </form>
             </div>
             <div class="element-image">
-                <img src="vehicle.png" alt="vehicle-image">
+                <img src="images/vehicle.png" alt="vehicle-image">
             </div>
         </div>
     </section>
@@ -195,7 +195,7 @@
                 </form>
             </div>
             <div class="element-image">
-                <img src="feedback.jpg" alt="feedback">
+                <img src="images/feedback.jpg" alt="feedback">
             </div>
 
         </div>
@@ -211,7 +211,7 @@
                     <h3>CYCLE</h3>
                 </div>
                 <div class="pricing-circle">
-                    <img src="cycle.png" alt="cycle">
+                    <img src="images/cycle.png" alt="cycle">
                 </div>
                 <div class="details">
                     $5 Daily<br>
@@ -227,7 +227,7 @@
                     <h3>MOTOR CYCLE</h3>
                 </div>
                 <div class="pricing-circle">
-                    <img src="motorcycle.png" alt="motorcycle">
+                    <img src="images/motorcycle.png" alt="motorcycle">
                 </div>
                 <div class="details">
                     $10 Daily<br>
@@ -243,7 +243,7 @@
                     <h3>FOUR WHEELERS</h3>
                 </div>
                 <div class="pricing-circle">
-                    <img src="four-wheelers.jpg" alt="four-wheelers">
+                    <img src="images/four-wheelers.jpg" alt="four-wheelers">
                 </div>
                 <div class="details">
                     $20 Daily<br>
@@ -257,7 +257,7 @@
         </div>
 
     </section>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
