@@ -1,22 +1,28 @@
-body{
+body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
 }
+
 .logo {
     text-align: left;
     display: inline;
     font-size: 45px;
 }
-.logo-first{
+
+.logo-first {
     color: white;
 }
-.logo-second{
+
+.logo-second {
     color: blue;
 }
-.navbar{
+
+.navbar {
     width: 95%;
-    background:  rgb(10, 160, 230);
+    background: rgb(10, 160, 230);
     height: auto;
     border: 1px solid black;
     text-align: right;
@@ -25,160 +31,415 @@ body{
     box-shadow: 0 4px 10px gray;
     position: fixed;
 }
-.navdiv{
+
+.navdiv {
     align-items: right;
     display: flex;
     justify-content: space-between;
 }
-.navlist{
-    justify-content: space-between;     /*to align items with some spaces*/
+
+.navlist {
+    justify-content: space-between;
+    /*to align items with some spaces*/
 }
-.navbarlist{
-    list-style : none;              /*to remove dots from lists*/
+
+.navbarlist {
+    list-style: none;
+    /*to remove dots from lists*/
     display: flex;
     justify-content: space-between;
 }
-.navbarlist li{
+
+.navbarlist li {
     padding-right: 20px;
     font-size: 20px;
 }
-.navbarlist li :hover{
+
+.navbarlist li :hover {
     color: yellow;
     font-size: 22px;
     transition: font-size 0.5s;
 }
-.navbarlist a{
-    text-decoration: none;          /*to remove underline below links*/
+
+.navbarlist a {
+    text-decoration: none;
+    /*to remove underline below links*/
     color: white;
 }
-.message h1{
+
+.message h1 {
     text-align: center;
     padding-top: 50px;
 }
-.header{
-    background-color: rgb(0, 194, 228);
-    color: azure;
-    height: auto;
-    padding: 0.01px;
-    border-radius: 10px;
-    padding-top: 0.5px;
-    padding-bottom: 0.5px;
-    border: 1px dotted black;
+
+.collapsible-section {
+    width: 90%;
+    margin: 150px auto;
+
 }
-.header:hover{
-    color: black;
-    transition: color 0.5s;
+
+.collapsible-section input[type="checkbox"] {
+    display: none;
 }
-.cover{
-    padding: 10px 20px 20px;
-    width: 100%;
+
+.collapsible-label {
+    display: block;
+    background-color: #032b5f;
+    color: white;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px grey;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border: 2px solid white;
+
 }
-.cover img{
-    width: 95%;
-    padding: 5px;
-    border-radius: 2px;
+
+.collapsible-label:hover {
+    background-color: #007bff;
+    color: white;
 }
-#employee , #vehicle , #feedback , #prices{
-    width: 100%;
-    padding: 5px;
-    border-radius: 2px;
-    box-shadow: 0 4px 10px gray;
-    background-color: #f5f5f5;
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3 ease;
+    padding: 0 16px;
+    border-radius: 0 0 8px 8px;
 }
-.element{
-    justify-content: space-between;
-    display: flex;
-    background-color: rgb(236, 254, 255);
+
+input[type="checkbox"]:checked+.collapsible-label+.collapsible-content {
+    max-height: 1000px;
     padding: 20px;
 }
-.element-form{
+
+/* collapsable component ends here */
+input.valid {
+    border: 2px solid green;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+/* Add employee styling starts */
+.employee {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 600px;
+
+}
+
+#vehicle {
+    display: none;
+}
+
+.vehicle {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 700px;
+
+}
+
+/* add vehicle ends here */
+/* add feedback starts */
+.feedback {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 550px;
+}
+
+/* end of add feddback */
+h2 {
+    text-align: center;
+    color: #032b5f;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+/* Styling of the form elements starts */
+.elements {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    height: 350px;
+}
+
+.elements-form {
+    width: 50%;
+}
+
+/* styling of the image added aside of the forms */
+.elements-img {
+    width: 50%;
+    height: 100%;
+}
+
+.elements-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: max-content;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* image styling ends here */
+/* form radio buttons styling */
+.form-element .radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ends radio button */
+
+.elements-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.form-element{
-    text-align: justify;
+
+.form-element {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
+    flex-direction: column;
 }
-.button-element{
-    display: flex;
-    justify-content: center;
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
-.button-element button{
-    height: 30px;
-    width: 130px;
-    color: white;
-    background-color: #032b5f;
-    
+
+/* select option for vehicle type  */
+.select-option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
-.text-input{
-    width: 200px;
-    height: 20px;
+
+.text-input,
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
-.text-input-large{
-    width: 200px;
+
+input:focus {
+    outline: none;
+    /* Removes the default focus border */
+    box-shadow: none;
+    /* Ensures no shadow appears */
+    /* Optional: Makes the border invisible */
 }
-.text-input1{
-    width: 200px;
+
+/* Submit button */
+button[type="submit"] {
+    margin-top: 35px;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.radio-group{
-    font-size: 19px;
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
-.form-label{
-    color: rgb(77, 2, 2);
-    font-size: 20px;
-    margin-right: 100px;
+
+/* form styling ends here */
+
+#feedback {
+    display: none;
 }
-.pricing-container{
+
+#price {
+    display: none;
+}
+
+.pricing {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 400px;
+}
+
+.pricing-container {
     width: 100%;
+
 }
-.element-image{
-    display: block;
+
+.pricing-block {
+    width: 30%;
+    margin-left: 20px;
 }
-.pricing-section{
+
+.pricing-block:hover {
+    width: 40%;
+    border: 3px solid #032b5f;
+}
+
+.pricing-block .btn:hover {
+    background-color: #0056b3;
+}
+
+/* pricing section ends here */
+
+/* Footer Section CSS */
+.footer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(236, 254, 255);
+    align-items: center;
+    background-color: #032b5f;
+    color: #fff;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    margin-top: 100px;
 }
-.pricing-block{
-    border: 0.1px solid black;
-    background-color: white;
-    margin: 50px;
-    width: 250px;
-    box-shadow: 2px 2px 5px rgb(161, 161, 255);
-    text-align: center;
-    height: fit-content;
+
+.footer-left .logo {
+    height: 40px;
 }
-.pricing-block:hover{
-    width: 260px;
-    border: 2px solid black;
-    margin: 40px;
+
+.footer-center .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
-.heading{
-    text-align: center;
-    color: mediumblue;
-    font-size: medium;
+
+.footer-center .footer-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
 }
-.pricing-circle img{
-    border-radius: 50%;
-    border: 1px solid grey;
+
+.footer-right a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
 }
-.btn{
-    color: white;
-    background-color: rgb(83, 150, 232);
+
+.footer-right a:hover,
+.footer-center .footer-nav li a:hover {
+    color: yellow;
+}
+
+.fa {
+    padding: 20px;
     font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
 }
-.purchase-btn{
-    height: auto;
-    width: auto;
-    margin: 20px 0px 5px;
+
+.fa:hover {
+    opacity: 0.7;
 }
-.btn:hover{
-    background-color: rgb(0, 36, 113);
-    box-shadow: 0px 5px 5px rgb(0, 251, 255);
-    transition: box-shadow 0.5s;
+
+.fa-facebook {
+    background: #125688;
+    color: white;
+}
+
+.fa-twitter {
+    background: #125688;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #125688;
+    color: white;
+}
+
+/* footer section ends here ends */
+.pricing-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: auto;
+}
+
+.pricing-block {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+
+}
+
+.pricing-block h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.price-circle {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.details {
+    margin: 10px 0;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
 }
