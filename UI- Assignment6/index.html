@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metacube Parking System</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -36,227 +37,347 @@
     </div>
 
 
-    <section id="employee">
+    <!-- Collapsible component start -->
+    <div class="collapsible-section">
+        <!-- Add Employee Collapsable content -->
+        <div id="employee">
+            <input type="checkbox" name="section" id="employee-checkbox">
+            <label for="employee-checkbox" class="collapsible-label">Add Employee</label>
+            <div class="collapsible-content" id="employee-content">
+                <!--Add Employee Section Start-->
+                <section class="employee" id="employeeSection">
+                    <h2>
+                        <center>Add Employee</center>
+                    </h2>
+                    <div class="elements">
+                        <div class="elements-form">
+                            <!--Add Employee Form-->
+                            <form id="AddEmployee" class="form" action="#" method="post" onsubmit="return false;">
+                                <div id="step1">
+                                    <div class="form-element" id="employee-name">
+                                        <label class="form-label" for="fullname" id="name">Full Name:</label>
+                                        <input class="text-input" type="text" id="fullname" name="fullName"
+                                            placeholder="Full Name" onkeydown="if(event.key==='Enter') validateName(event)"
+                                            required>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step2" style="display: none;">
+                                    <p id="greet"></p>
+                                    <div class="form-element" id="employee-gender">
 
-        <center class="header">
-            <h2>Add Employee</h2>
-        </center>
-        <!--form to add employee-->
-        <div class="element" id="employee-form">
-            <div class="element-form">
-                <form action="" autocomplete="off">
-                    <div class="form-element" id="step-1">
-                        <label class="form-label" for="name">Full Name :</label>
-                        <input class="text-input" type="text" id="name" name="fname" required placeholder="Enter name">
+                                        <label class="form-label">Gender:</label>
+                                        <!-- Radio buttons group -->
+                                        <div class="radio-group">
+                                            <input class="text-input" type="radio" id="male" name="gender" value="male"
+                                                required>
+                                            <label class="form-label" for="male">Male</label>
+
+                                            <input class="text-input" type="radio" id="female" name="gender"
+                                                value="female" required>
+                                            <label class="form-label" for="female">Female</label>
+
+                                            <input class="text-input" type="radio" id="other" name="gender"
+                                                value="other" required>
+                                            <label class="form-label" for="other">Other</label>
+
+
+                                        </div>
+                                        <!-- radio button group ends -->
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step3" style="display: none;">
+                                    <div class="form-element" id="employee-email">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input class="text-input" type="email" id="email" placeholder="Email"
+                                            name="Email" onkeydown="if(event.key==='Enter') validateEmail(event)">
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step4" style="display: none;">
+                                    <div class="form-element" id="employee-password">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input class="text-input" type="password" id="password" placeholder="Password"
+                                            name="password" onkeydown="if(event.key==='Enter') validatePassword(event)">
+                                        <p id="strength-msg" style="color: red;"></p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step5" style="display: none;">
+                                    <div class="form-element" id="employee-confirm">
+                                        <label class="form-label" for="confirmPassword">Confirm Password</label>
+                                        <input class="text-input" type="password" id="confirmPassword"
+                                            placeholder="Confirm Password" name="confirmPassword"
+                                            onkeydown="if(event.key==='Enter') validateConfirmPassword(event)">
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step6" style="display: none;">
+                                    <div class="form-element" id="employee-contact">
+                                        <label class="form-label" for="contact">Contact No.</label>
+                                        <input type="tel" class="text-input" id="contact" pattern="[0-9]{10}" required
+                                            onkeydown="if(event.key==='Enter') validateContact(event)">
+
+                                    </div>
+                                </div>
+                                <!-- <div id="step7" style="display: none;"> -->
+                                <div class="form-element" style="display: none;">
+                                    <button id="submit-button">Register</button>
+                                </div>
+                                <!-- </div> -->
+                            </form>
+                        </div>
+                        <!--Add employee form ends-->
+                        <!-- employee image section -->
+                        <div class="elements-img">
+                            <img src="images/employee.png" alt="Employee Pic">
+                        </div>
+                        <!-- employee image section ends -->
                     </div>
-                    <br><br>
 
-                    <div class="form-element" id="step-2" style="display: none;">
-                        <label class="form-label" for="gender">Gender :</label>
-                        <div class="radio-group">
-                            <label for="male"><input type="radio" name="gender" value="male" id="male" required>Male</label>
-                            
-                            <label for="female"><input type="radio" name="gender" value="female" id="female">Female</label>
-                            
-                            <label for="other"><input type="radio" name="gender" value="other" id="other">Other</label>
+                </section>
+                <!--Add employee section ends-->
+            </div>
+
+        </div>
+        <!-- employee collapsable ends -->
+
+        <!--Add Vechicle collapsable  section start-->
+        <div id="vehicle">
+            <input type="checkbox" name="section" id="vehicle-checkbox">
+            <label for="vehicle-checkbox" class="collapsible-label">Add Vehicle</label>
+            <div class="collapsible-content">
+                <!-- Add vehicle section starts -->
+                <section class="vehicle">
+                    <h2>
+                        <center>Add Vehicle</center>
+                    </h2>
+                    <div class="elements">
+                        <!-- vehicle  image section  -->
+                        <div class="elements-img">
+                            <img src="images/vehicle.png" alt="Vehicles">
+                        </div>
+                        <!-- vehicle image ends -->
+                        <!-- Add vehicle form starts -->
+                        <div class="elements-form">
+                            <form id="AddVehicle" class="form" action="#" method="post">
+                                <div class="form-element">
+                                    <label class="form-label" for="vehicleMake">Vehicle Make</label>
+                                    <input class="text-input" type="text" id="vehicleMake" name="vehicleMake"
+                                        placeholder="Vehicle Make" required>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="vehicleModel">Vehicle Model</label>
+                                    <input class="text-input" type="text" id="vehicleModel" name="vehicleModel"
+                                        placeholder="Vehicle Model" required>
+                                </div>
+                                <br>
+                                <!-- Drop down for vehicle type -->
+                                <div class="form-element">
+                                    <label class="form-label" for="type">Type:</label>
+                                    <select class="select-option" name="type" id="vehicle-type">
+                                        <option value="cycle">Cycle</option>
+                                        <option value="four-wheeler">Four-Wheeler</option>
+                                        <option value="motorCycle">Motor-Cycle</option>
+
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="vehicleNumber">Vehicle Number</label>
+                                    <input class="text-input" type="text" id="vehicleNumber"
+                                        placeholder="Vehicle Number" name="vehicleNumber">
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="employeeID">Employee ID</label>
+                                    <input class="text-input" type="text" id="employeeID" placeholder="Employee ID"
+                                        name="employeeID">
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="identification">Identification</label>
+                                    <textarea class="text-input" name="identification" id="identification" rows="5"
+                                        cols="40" placeholder="Color, mark, visible accessory etc." required></textarea>
+                                </div>
+                                <div class="form-element">
+                                    <button type="submit" class="submit-button">Register</button>
+                                </div>
+                            </form>
+                            <!--Add vehicle form ends-->
                         </div>
                     </div>
-                    <br><br>
 
-                    <div class="form-element" id="step-3" style="display: none;">
-                        <label class="form-label" for="email">Email Id :</label>
-                        <input type="email" class="text-input" name="email" id="email" required placeholder="Enter email">
-                    </div>
-                    <br><br>
+                    <!--Add Vehicle Form-->
 
-                    <div class="form-element" id="step-4" style="display: none;">
-                        <label class="form-label" for="password">Password :</label>
-                        <input type="password" class="text-input" name="password" id="password" required placeholder="Enter Password">
-                    </div>
-                    <br><br>
-
-                    <div class="form-element" id="step-5" style="display: none;">
-                        <label class="form-label" for="">Confirm Password :</label>
-                        <input type="password" class="text-input" name="password" id="confirmPassword" required placeholder="Re-enter Password">
-                    </div>
-                    <br><br>
-                    <div class="form-element" id="step-6" style="display: none;">
-                        <label class="form-label" for="">Contact Number :</label>
-                        <input type="tel" class="text-input" id="contact" maxlength="10" minlength="10" placeholder="Enter Contact number">
-                    </div>
-                    <br><br>
-
-                    <div class="button-element">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-            <div class="element-image">
-                <img src="images/employee.png" alt="employee-image">
+                </section>
             </div>
         </div>
-    </section>
+        <!--Add vehicle section ends-->
 
-    <section id="vehicle">
-
-        <center class="header">
-            <h2>Add Vehicle</h2>
-        </center>
-        <!--form to add vehicle details-->
-        <div class="element" id="vehicle-form" style="display: none;">
-            <div class="element-form">
-                <form action="" autocomplete="off">
-                    <div class="form-element" id="step-7" style="display: none;">
-                        <label class="form-label" for="make">Vehicle-Make(Company) :</label>
-                        <input type="text" class="text-input" id="make" name="make" required
-                            placeholder="Enter company name">
+        <!-- Feedback collapser start -->
+        <div id="feedback">
+            <input type="checkbox" name="section" id="feedback-checkbox">
+            <label for="feedback-checkbox" class="collapsible-label">Add Feedback</label>
+            <div class="collapsible-content">
+                <!-- Add feedback section -->
+                <section class="feedback">
+                    <h2>
+                        <center>Give Feedback</center>
+                    </h2>
+                    <!--Add feedback Form-->
+                    <div class="elements">
+                        <div class="elements-form">
+                            <form id="addFeedBack" class="form" action="#" method="post">
+                                <div class="form-element">
+                                    <label class="form-label" for="name">Name:</label>
+                                    <input class="text-input" type="text" id="name" name="name" placeholder="Your name"
+                                        required>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="text-input" type="email" id="email-feed" placeholder="Email"
+                                        name="Email">
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="contact">Contact No.</label>
+                                    <input class="text-input" type="tel" id="contact-feed" pattern="[0-9]{10}" required>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="remark">Your remark</label>
+                                    <textarea class="text-input" name="remark" id="remark" rows="5" cols="40"
+                                        placeholder="Please enter your remark" required></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                            <!--Add feedback form ends-->
+                        </div>
+                        <!-- Feedback image  -->
+                        <div class="elements-img">
+                            <img src="images/feedback.jpg" alt="Image" style=" object-fit: fill; width: 100%; height: 100%;">
+                        </div>
+                        <!-- image ends -->
                     </div>
-                    <br><br>
 
-                    <div class="form-element" id="step-8" style="display: none;">
-                        <label class="form-label" for="model">Model :</label>
-                        <input type="text" class="text-input" name="model" id="model" required
-                            placeholder="Enter Model">
-                    </div>
-                    <br><br>
 
-                    <div class="form-element" id="step-9" style="display: none;">
-                        <label class="form-label" for="type">Type :</label>
-                        <select name="type" id="type" class="text-input">
-                            <option value="">--Select--</option>
-                            <option value="Car">Car</option>
-                            <option value="Bike">Bike</option>
-                            <option value="Scooter">Scooter</option>
-                        </select>
-                    </div>
-                    <br><br>
-
-                    <div class="form-element" id="step-10" style="display: none;">
-                        <label class="form-label" for="number">Vehicle Number :</label>
-                        <input type="text" class="text-input" name="number" id="number" required
-                            placeholder="Enter Vehicle Number">
-                    </div>
-                    <br><br>
-
-                    <div class="form-element" id="step-11" style="display: none;">
-                        <label class="form-label" for="empid">Employee Id :</label>
-                        <input type="text" class="text-input" name="empid" id="empid" required
-                            placeholder="Enter employee id">
-                    </div>
-                    <br><br>
-
-                    <div class="form-element" id="step-12" style="display: none;">
-                        <label class="form-label" for="identification">Identification :</label>
-                        <textarea name="identification" class="text-input-large" id="identification" required
-                            placeholder="Color , mark , visible accessory etc.." rows="4" ></textarea>
-                    </div>
-                    <br><br>
-
-                    <div class="button-element">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-            <div class="element-image">
-                <img src="images/vehicle.png" alt="vehicle-image">
+                </section>
+                <!--feedback section ends-->
             </div>
         </div>
-    </section>
-
-    <section id="feedback">
-
-        <center class="header">
-            <h2>Get In Touch </h2>
-        </center>
-        <!--From to send feedback to a mail id-->
-        <div class="element">
-            <div class="element-form">
-                <form action="">
-                    <div class="form-element">
-                        <input type="text" class="text-input" id="name" name="fname" required placeholder="Name">
-                    </div><br><br>
-
-                    <div class="form-element">
-                        <input type="email" name="email" class="text-input" id="email" required placeholder="Email">
-                    </div><br><br>
-
-                    <div class="form-element">
-                        <input type="text" class="text-input" name="subject" id="subject" required
-                            placeholder="Subject">
-                    </div><br><br>
-
-                    <div class="form-element">
-                        <textarea name="message" class="text-input-large" id="message" required rows="4" placeholder="Message..."></textarea>
-                    </div><br><br>
-
-                    <div class="button-element">
-                        <button type="submit">Send Email -></button>
+        <!-- ends of feedback collapser -->
+        <div id="price">
+            <input type="checkbox" name="section" id="price-checkbox">
+            <label for="price-checkbox" class="collapsible-label">Pricing</label>
+            <div class="collapsible-content" id="price-content">
+                <section class="pricing pricing-container">
+                    <h2>
+                        <center>Pricing</center>
+                    </h2>
+                    <div class="pricing-section" id="pricing-section">
+                        <!-- Cycle price block  -->
+                        <div class="pricing-block" id="cycle">
+                            <h3>CYCLE</h3>
+                            <div class="price-circle">
+                                <img src="images/cycle.png" alt="cycle">
+                            </div>
+                            <div class="details">
+                                Rs.5 Daily<br>
+                                Rs.100 Monthly<br>
+                                Rs.500 Yearly
+                            </div>
+                            <a class="btn purchase" href="#">Purchase Now</a>
+                        </div>
+                        <!-- cycle block ends -->
+                        <!--two wheeler block   -->
+                        <div class="pricing-block" id="motorCycle">
+                            <h3>Motor Cycle</h3>
+                            <div class="price-circle">
+                                <img src="images/motorcycle.png" alt="motorcycle">
+                            </div>
+                            <div class="details">
+                                Rs.10 Daily<br>
+                                Rs.200 Monthly<br>
+                                Rs.1000 Yearly
+                            </div>
+                            <a class="btn purchase" href="#">Purchase Now</a>
+                        </div>
+                        <!-- two wheeler ends -->
+                        <!-- Four wheeler block -->
+                        <div class="pricing-block" id="four-wheeler">
+                            <h3>Four Wheelers</h3>
+                            <div class="price-circle">
+                                <img src="images/four-wheelers.jpg" alt="car">
+                            </div>
+                            <div class="details">
+                                Rs.20 Daily<br>
+                                Rs.500 Monthly<br>
+                                Rs.3500 Yearly
+                            </div>
+                            <a class="btn purchase" href="#">Purchase Now</a>
+                        </div>
+                        <!-- Four wheeler block end -->
                     </div>
-                </form>
-            </div>
-            <div class="element-image">
-                <img src="images/feedback.jpg" alt="feedback">
-            </div>
-
-        </div>
-    </section>
-    <!--Specifies price ranges according to the type of vehicle-->
-    <section id="prices" class="pricing-container">
-        <center class="header">
-            <h2>Pricing Range</h2>
-        </center>
-        <div class="pricing-section">
-            <div class="pricing-block">
-                <div class="heading">
-                    <h3>CYCLE</h3>
-                </div>
-                <div class="pricing-circle">
-                    <img src="images/cycle.png" alt="cycle">
-                </div>
-                <div class="details">
-                    $5 Daily<br>
-                    $100 Monthly<br>
-                    $500 Yearly<br>
-                </div>
-                <div class="purchase-btn">
-                    <button class="btn">Purchase Now</button>
-                </div>
-            </div>
-            <div class="pricing-block">
-                <div class="heading">
-                    <h3>MOTOR CYCLE</h3>
-                </div>
-                <div class="pricing-circle">
-                    <img src="images/motorcycle.png" alt="motorcycle">
-                </div>
-                <div class="details">
-                    $10 Daily<br>
-                    $200 Monthly<br>
-                    $1000 Yearly<br>
-                </div>
-                <div class="purchase-btn">
-                    <button class="btn">Purchase Now</button>
-                </div>
-            </div>
-            <div class="pricing-block">
-                <div class="heading">
-                    <h3>FOUR WHEELERS</h3>
-                </div>
-                <div class="pricing-circle">
-                    <img src="images/four-wheelers.jpg" alt="four-wheelers">
-                </div>
-                <div class="details">
-                    $20 Daily<br>
-                    $500 Monthly<br>
-                    $3500 Yearly<br>
-                </div>
-                <div class="purchase-btn">
-                    <button class="btn">Purchase Now</button>
-                </div>
+                    <!-- End of pricing section -->
+                </section>
             </div>
         </div>
+    </div>
+    <!-- ends of collapser section -->
 
-    </section>
+    <!-- Pricing section start -->
+
+
+    <div id="selection" style="display:none;">
+        <h2>Select Plan & Currency Type</h2>
+        <select id="planSelect">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+        <select id="currencySelect">
+            <option value="USD">USD</option>
+            <option value="YEN">YEN</option>
+        </select>
+        <br>
+        <button class="btn" id="get-pass">Get Pass</button>
+        <h3 id="priceDisplay" style="color: black;"></h3>
+    </div>
+    <!-- Footer section starts -->
+    <footer class="footer">
+        <!-- Logo section -->
+        <div class="footer-left">
+            <div class="logo"><span class="logo-first">meta</span><span class="logo-second">park</span> </div>
+        </div>
+        <!-- end logo section -->
+        <!-- links section -->
+        <div class="footer-center">
+            <ul class="footer-nav">
+                <li><a href="#employee">Add Employee</a></li>
+                <li><a href="#vehicle">Add Vehicle</a></li>
+                <li><a href="#feedback">Add Feedback</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </div>
+        <!-- end of link section -->
+        <!-- social media icons  -->
+        <div class="footer-right">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+        <!-- end media icons -->
+    </footer>
+    <!-- end of the footer section -->
+
+
     <script src="js/scripts.js"></script>
 </body>
 
