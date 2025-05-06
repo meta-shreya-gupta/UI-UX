@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- js to add collapsible and dropdown feature -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- js to add linecharts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+    <title>Annex - Responsive Bootstrap 4 Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid row d-flex">
+        <!-- Side navigation bar starts -->
+        <div class="bg-light sidebar overflow-auto d-none d-md-block col-2" id="sidebar">
+            <div class="logo">
+                <i class="fa fa-cubes" aria-hidden="true" style="font-size: 1.7rem;"></i>
+                <h1>ANNEX</h1>
+            </div>
+            <!-- Main section of sidebar starts -->
+            <div class="main">
+                <p class="text-secondary">Main</p>
+                <ul class="pl-0">
+                    <li class="my-4"><i class="fa fa-desktop mr-4" aria-hidden="true"></i>Dashboard</li>
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-file-code-o mr-4" aria-hidden="true"></i>Advanced UI
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <ul>
+                                <li class="my-4">Highlight</li>
+                                <li class="my-4">Rating</li>
+                                <li class="my-4">Alertify</li>
+                                <li class="my-4">Range Slider</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4"><i class="fa fa-calendar mr-4" aria-hidden="true"></i>Calender</li>
+                </ul>
+            </div>
+            <!-- Main section of sidebar ends -->
+            <!-- Component section of sidebar starts -->
+            <div class="components">
+                <p class="text-secondary">Components</p>
+                <ul class="pl-0">
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-bullseye mr-4" aria-hidden="true"></i>UI Elements
+                        </a>
+                        <div class="collapse" id="collapseExample2">
+                            <ul>
+                                <li class="my-4">Buttons</li>
+                                <li class="my-4">Cards</li>
+                                <li class="my-4">Tabs & Accordians</li>
+                                <li class="my-4">Modals</li>
+                                <li class="my-4">Images</li>
+                                <li class="my-4">Alerts</li>
+                                <li class="my-4">Progress Bars</li>
+                                <li class="my-4">Dropdowns</li>
+                                <li class="my-4">Lightbox</li>
+                                <li class="my-4">Navs</li>
+                                <li class="my-4">Pagination</li>
+                                <li class="my-4">Popover & Tooltips</li>
+                                <li class="my-4">Badge</li>
+                                <li class="my-4">Carousel</li>
+                                <li class="my-4">Video</li>
+                                <li class="my-4">Typography</li>
+                                <li class="my-4">Sweet Alert</li>
+                                <li class="my-4">Grid</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-calendar-o mr-4" aria-hidden="true"></i>Forms
+                        </a>
+                        <div class="collapse" id="collapseExample3">
+                            <ul>
+                                <li class="my-4">Form Elements</li>
+                                <li class="my-4">Form Validation</li>
+                                <li class="my-4">Form Advanced</li>
+                                <li class="my-4">Form Editors</li>
+                                <li class="my-4">Form File Upload</li>
+                                <li class="my-4">Form Mask</li>
+                                <li class="my-4">Summernote</li>
+                                <li class="my-4">Form Xeditable</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-line-chart mr-4" aria-hidden="true"></i>Charts
+                        </a>
+                        <div class="collapse" id="collapseExample4">
+                            <ul>
+                                <li class="my-4">Morris Chart</li>
+                                <li class="my-4">Chartist Chart</li>
+                                <li class="my-4">Chartjs Chart</li>
+                                <li class="my-4">Flot Chart</li>
+                                <li class="my-4">C3 Chart</li>
+                                <li class="my-4">JQuery Knob Chart</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-square-o mr-4" aria-hidden="true"></i>Icons
+                        </a>
+                        <div class="collapse" id="collapseExample5">
+                            <ul>
+                                <li class="my-4">Material Design</li>
+                                <li class="my-4">Ion Icons</li>
+                                <li class="my-4">Font Awesome</li>
+                                <li class="my-4">Themify Icons</li>
+                                <li class="my-4">Dripicons</li>
+                                <li class="my-4">Typicons Icons</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-table mr-4" aria-hidden="true"></i>Tables
+                        </a>
+                        <div class="collapse" id="collapseExample6">
+                            <ul>
+                                <li class="my-4">Basic Tables</li>
+                                <li class="my-4">Data Table</li>
+                                <li class="my-4">Rasponsive Table</li>
+                                <li class="my-4">Editable Table</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- component section of sidebar ends -->
+            <!-- Extra section of sidebar starts -->
+            <div class="extra">
+                <p class="text-secondary">Extra</p>
+                <ul class="pl-0">
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-map-marker mr-4" aria-hidden="true"></i>Maps
+                        </a>
+                        <div class="collapse" id="collapseExample7">
+                            <ul>
+                                <li class="my-4">Google Maps</li>
+                                <li class="my-4">Vector Maps</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="my-4">
+                        <a data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fa fa-file mr-4" aria-hidden="true"></i>Pages
+                        </a>
+                        <div class="collapse" id="collapseExample8">
+                            <ul>
+                                <li class="my-4">Login</li>
+                                <li class="my-4">Register</li>
+                                <li class="my-4">Recover Password</li>
+                                <li class="my-4">Lock Screen</li>
+                                <li class="my-4">Blank Page</li>
+                                <li class="my-4">Error 404</li>
+                                <li class="my-4">Error 500</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Extra section of sidebar ends -->
+        </div>
+        <!-- side navigation bar ends -->
+
+
+
+        <!-- Content of the page starts -->
+        <div class="content d-block col-10 bg-light">
+            <!-- top navigation bar starts -->
+            <nav class="navbar navbar-expand-lg navbar-light d-block bg-primary sticky-top">
+                <div class="container-fluid d-flex justify-content-between">
+                    <form class="form-inline d-none d-sm-block">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <!-- right-side of top navigation bar starts -->
+                    <div class="d-flex align-items-center">
+                        <!-- Language dropdown -->
+                        <div class="dropdown mx-2">
+                            <a class="btn btn-primary" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                English
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Italian</a>
+                                <a class="dropdown-item" href="#">French</a>
+                                <a class="dropdown-item" href="#">Spanish</a>
+                                <a class="dropdown-item" href="#">Russian</a>
+                            </div>
+                        </div>
+                        <!-- Messages dropdown -->
+                        <div class="dropdown mx-2">
+                            <a class="btn btn-primary" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div>
+                                    <p>Messsages</p>
+                                </div>
+                                <a class="dropdown-item" href="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-2"><img src="avatar-2.jpg" alt=""></div>
+                                        <div class="col-10 item-content">
+                                            <p>Charles M. Jones</p>
+                                            <p>Dummy text of the printing and typesetting industry</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><img src="avatar-3.jpg" alt=""></div>
+                                        <div class="col-10 item-content">
+                                            <p>Thomas J. Mimms</p>
+                                            <p>You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><img src="avatar-4.jpg" alt=""></div>
+                                        <div class="col-10 item-content">
+                                            <p>Luis M. Konrad</p>
+                                            <p>It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <p>View All</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Notification dropdown -->
+                        <div class="dropdown mx-2">
+                            <a class="btn btn-primary" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <p>Notifications</p>
+                                <a class="dropdown-item" href="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                                        <div class="col-10 item-content">
+                                            <p>Your Order is placed</p>
+                                            <p>Dummy text of the printing and typesetting industry</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-commenting-o" aria-hidden="true"></i></div>
+                                        <div class="col-10 item-content">
+                                            <p>New messages received</p>
+                                            <p>You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-glass" aria-hidden="true"></i></div>
+                                        <div class="col-10 item-content">
+                                            <p>Your item is shipped</p>
+                                            <p>It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <p>View All</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Profiles dropdown -->
+                        <div class="dropdown mx-2">
+                            <a class="btn btn-primary" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="avatar-1.jpg" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <p>Welcome</p>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-user-o" aria-hidden="true"></i></div>
+                                        <div class="col-10">Profile</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-google-wallet" aria-hidden="true"></i></div>
+                                        <div class="col-10">My Wallet</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                                        <div class="col-10">Settings</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                                        <div class="col-10">Lock Screen</div>
+                                    </div>
+                                </a>
+                                <hr>
+                                <a class="dropdown-item" href="">
+                                    <div class="row">
+                                        <div class="col-2"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                                        <div class="col-10">Logout</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- heading below navbar -->
+            <div class="d-flex justify-content-between m-3">
+                <h3>Dashboard</h3>
+                <p>Annex / Dashboard</p>
+            </div>
+            <!-- cards below navbar -->
+            <div class="d-flex justify-content-between">
+                <div class="bg-white d-flex">
+                    <div class="m-4">
+                        <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>$180 90</h3>
+                        <p>Visits today</p>
+                    </div>
+                    <div class="m-4">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <p>5.26%</p>
+                    </div>
+                </div>
+
+
+                <div class="bg-white d-flex">
+                    <div class="m-4">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>562</h3>
+                        <p>New Users</p>
+                    </div>
+                    <div class="m-4">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        <p>8.68%</p>
+                    </div>
+                </div>
+
+
+                <div class="bg-white d-flex">
+                    <div class="m-4">
+                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>7514</h3>
+                        <p>New Orders</p>
+                    </div>
+                    <div class="m-4">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <p>2.35%</p>
+                    </div>
+                </div>
+
+
+                <div class="bg-white d-flex">
+                    <div class="m-4">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>$32 874</h3>
+                        <p>Total Sales</p>
+                    </div>
+                    <div class="m-4">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        <p>2.35%</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- linechart and piechart -->
+            <div class="row mt-4">
+                <div class="col-8">
+                    <div id="curve_chart" style="height: 400px;"></div>
+                </div>
+                <div class="col-4">
+                    <div id="donutchart" style="height: 400px;"></div>
+                </div>
+            </div>
+
+            <!-- cards -->
+            <div class="row">
+                <div class="col-lg-4 col-12 ">
+                    <!-- Twitter card -->
+                    <div class="col-12 mt-3" style="background-color: rgb(64, 164, 241);">
+                        <i class="fa fa-twitter text-white pt-3 text-center"
+                            style="font-size: 60px; display: flex; justify-content: center;"></i>
+                        <div class="twitter-view d-flex">
+                            <div class="followers">
+                                <h6>54K</h6>
+                                <p>Followers</p>
+                            </div>
+                            <div class="tweets">
+                                <h6>44K</h6>
+                                <p>Tweets</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- facebook card -->
+                    <div class="col-12 mt-3 rounded" style="background-color:rgb(91, 107, 232);">
+                        <i class="fa fa-facebook text-white pt-3"
+                            style="font-size: 60px; display: flex; justify-content: center;"></i>
+                        <div class="twitter-view d-flex">
+                            <div class="followers">
+                                <h6>54K</h6>
+                                <p>Followers</p>
+                            </div>
+                            <div class="tweets">
+                                <h6>44K</h6>
+                                <p>Posts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bandwidth card -->
+                <div class="col-lg-4 mt-3">
+                    <div id="chart_div" style="width: 100%; height: 400px;"></div>
+                </div>
+                <!-- temperature card -->
+                <div class="col-lg-4 mt-3 card">
+                    <img class="card-img-top" src="wather.jpg" alt="Card image cap"
+                        style="border-radius: 0%; height: 200px;">
+                    <div class="card-body row text-white m-0 p-0" style="background-color: rgb(91, 107, 232);">
+                        <div class="col-3 py-0 my-0">
+                            <img src="clouds.png" alt="">
+                            <p>SUN</p>
+                            <p>DAY</p>
+                            <p>25<sup>th</sup></p>
+                        </div>
+                        <div class="col-3">
+                            <p>32&deg;</p>
+                            <p>Partly</p>
+                            <p>Cloudy</p>
+                            <p>15km/hr</p>
+                            <p>-37%</p>
+                        </div>
+                        <div class="col-3">
+                            <p>MON</p>
+                            <img src="rain.png" alt="">
+                            <p>38&deg;</p>
+                        </div>
+                        <div class="col-3">
+                            <p>TUE</p>
+                            <img src="wind.png" alt="">
+                            <p>32&deg;</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="row">
+                    <!-- Overview Table -->
+                    <div class="social-cards col-md-8 py-2 pr-1">
+                        <div class="social p-4" style="background-color: #ffffff">
+                            <p class="font-weight-bold">Overview</p>
+                            <table class="w-100">
+                                <thead class="border-bottom">
+                                    <tr class="">
+                                        <th class="py-2">Member</th>
+                                        <th class="py-2">Name</th>
+                                        <th class="py-2">Country</th>
+                                        <th class="py-2">Earnings</th>
+                                        <th class="py-2">Sales</th>
+                                        <th class="py-2">Reviews</th>
+                                        <th class="py-2">Progress</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td class="py-2">
+                                            <img height="40" style="border-radius: 50%" src="avatar-2.jpg" alt="" />
+                                        </td>
+                                        <td class="py-2">
+                                            <a class="text-primary" href="">Ruby T. Curd</a>
+                                        </td>
+                                        <td class="py-2">
+                                            <img height="20" src="us_flag.jpg" alt="" />
+                                        </td>
+                                        <td class="py-2">$100</td>
+                                        <td class="py-2">10</td>
+                                        <td class="py-2">
+                                            <div class="reviews d-flex">
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                            </div>
+                                        </td>
+                                        <td class="py-2">
+                                            <div class="progress" style="height: 0.7rem">
+                                                <div class="progress-bar" role="progressbar"
+                                                    style="width: 80%; background-color: blue" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="py-2">
+                                            <img height="40" style="border-radius: 50%" src="avatar-3.jpg"
+                                                alt="" />
+                                        </td>
+                                        <td class="py-2">
+                                            <a class="text-primary" href="">William A. Johnson</a>
+                                        </td>
+                                        <td class="py-2">
+                                            <img height="20" src="french_flag.jpg" alt="" />
+                                        </td>
+                                        <td class="py-2">$490</td>
+                                        <td class="py-2">24</td>
+                                        <td class="py-2">
+                                            <div class="reviews d-flex">
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                            </div>
+                                        </td>
+                                        <td class="py-2">
+                                            <div class="progress" style="height: 0.7rem">
+                                                <div class="progress-bar" role="progressbar"
+                                                    style="width: 30%; background-color: green" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="py-2">
+                                            <img height="40" style="border-radius: 50%" src="avatar-4.jpg"
+                                                alt="" />
+                                        </td>
+                                        <td class="py-2">
+                                            <a class="text-primary" href="">Bobby M. Gray</a>
+                                        </td>
+                                        <td class="py-2">
+                                            <img height="20" src="spain_flag.jpg" alt="" />
+                                        </td>
+                                        <td class="py-2">$380</td>
+                                        <td class="py-2">19</td>
+                                        <td class="py-2">
+                                            <div class="reviews d-flex">
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                            </div>
+                                        </td>
+                                        <td class="py-2">
+                                            <div class="progress" style="height: 0.7rem">
+                                                <div class="progress-bar" role="progressbar"
+                                                    style="width: 70%; background-color: black" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="py-2">
+                                            <img height="40" style="border-radius: 50%" src="avatar-5.jpg"
+                                                alt="" />
+                                        </td>
+                                        <td class="py-2">
+                                            <a class="text-primary" href="">Robert N. Carlile</a>
+                                        </td>
+                                        <td class="py-2">
+                                            <img height="20" src="russia_flag.jpg" alt="" />
+                                        </td>
+                                        <td class="py-2">$450</td>
+                                        <td class="py-2">30</td>
+                                        <td class="py-2">
+                                            <div class="reviews d-flex">
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                            </div>
+                                        </td>
+                                        <td class="py-2">
+                                            <div class="progress" style="height: 0.7rem">
+                                                <div class="progress-bar" role="progressbar"
+                                                    style="width: 90%; background-color: red" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="py-2">
+                                            <img height="40" style="border-radius: 50%" src="avatar-6.jpg"
+                                                alt="" />
+                                        </td>
+                                        <td class="py-2">
+                                            <a class="text-primary" href="">Ruby T. Curd</a>
+                                        </td>
+                                        <td class="py-2">
+                                            <img height="20" src="italy_flag.jpg" alt="" />
+                                        </td>
+                                        <td class="py-2">$500</td>
+                                        <td class="py-2">40</td>
+                                        <td class="py-2">
+                                            <div class="reviews d-flex">
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                                <img height="15" class="pr-1" src="star.svg" alt="" />
+                                            </div>
+                                        </td>
+                                        <td class="py-2">
+                                            <div class="progress" style="height: 0.7rem">
+                                                <div class="progress-bar" role="progressbar"
+                                                    style="width: 10%; background-color: purple" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-4 graph-wave py-2 px-2">
+                        <div class="px-4 py-4" style="background-color: #ffffff">
+                            <p class="font-weight-bold">New Users</p>
+                            <div class="User-table">
+                                <table class="w-100">
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-5.jpg" alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">Ruby T. Curd</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">Newyork</p>
+                                            </td>
+                                            <td class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2" style="background-color: green; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">Now</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-4.jpg"
+                                                    alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">William A. Johnson</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">California</p>
+                                            </td>
+                                            <td
+                                                class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2"
+                                                    style="background-color: green; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">Now</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-3.jpg"
+                                                    alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">Robert N. Carlile</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">
+                                                    India
+                                                </p>
+                                            </td>
+                                            <td
+                                                class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2"
+                                                    style="background-color: red; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">10 Min ago</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-2.jpg"
+                                                    alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">Bobby M. Gray</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">
+                                                    Australia
+                                                </p>
+                                            </td>
+                                            <td
+                                                class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2"
+                                                    style="background-color: green; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">Now</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-1.jpg"
+                                                    alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">Ruby T. Curd</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">
+                                                    New Zealand
+                                                </p>
+                                            </td>
+                                            <td
+                                                class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2"
+                                                    style="background-color: red; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">36 min ago</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-6.jpg"
+                                                    alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">Robert N. Carlile</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">
+                                                    India
+                                                </p>
+                                            </td>
+                                            <td
+                                                class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2"
+                                                    style="background-color: green; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">Now</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="py-3">
+                                                <img height="40" style="border-radius: 50%" src="avatar-4.jpg"
+                                                    alt="" />
+                                            </td>
+                                            <td class="py-3">
+                                                <p class="h6">Bobby M. Gray</p>
+                                                <p class="text-secondary" style="font-size: 0.7rem">
+                                                    India
+                                                </p>
+                                            </td>
+                                            <td
+                                                class="py-3 d-flex flex-column align-items-center justify-content-center">
+                                                <div class="p-1 m-1 mt-2"
+                                                    style="background-color: red; border-radius: 50%"></div>
+                                                <p style="font-size: 0.7rem">58 min ago</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="linechart.js"></script>
+    <script src="piechart.js"></script>
+    <script src="areachart.js"></script>
+</body>
+
+</html>
