@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metacube Parking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <!--Navbar with Add Employee , Add Vehicle , Give Feedback , Pricing-->
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <span class="logo-first">meta</span><span class="logo-second">cube</span>
+            </div>
+            <div class="navlist">
+                <ul class="navbarlist">
+                    <li><a href="#employee">Add Employee</a></li>
+                    <li><a href="#vehicle">Add Vehicle</a></li>
+                    <li><a href="#feedback">Give Feedback</a></li>
+                    <li><a href="#prices">Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cover">
+        <div class="message">
+            <h1>WELCOME TO METACUBE PARKING SYSTEM</h1>
+        </div>
+        <img src="images/cover image.jpg" alt="metacube parking cover image">
+    </div>
+
+
+    <!-- Collapsible component start -->
+    <div class="collapsible-section">
+        <!-- Add Employee Collapsable content -->
+        <div id="employee">
+            <input type="checkbox" name="section" id="employee-checkbox">
+            <label for="employee-checkbox" class="collapsible-label">Add Employee</label>
+            <div class="collapsible-content" id="employee-content">
+                <!--Add Employee Section Start-->
+                <section class="employee" id="employeeSection">
+                    <h2>
+                        <center>Add Employee</center>
+                    </h2>
+                    <div class="elements">
+                        <div class="elements-form">
+                            <!--Add Employee Form-->
+                            <form id="AddEmployee" class="form" action="#" method="post" onsubmit="return false;">
+                                <div id="step1">
+                                    <div class="form-element" id="employee-name">
+                                        <label class="form-label" for="fullname" id="name">Full Name:</label>
+                                        <input class="text-input" type="text" id="fullname" name="fullName"
+                                            placeholder="Full Name" onkeydown="if(event.key==='Enter') validateName(event)"
+                                            required>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step2" style="display: none;">
+                                    <p id="greet"></p>
+                                    <div class="form-element" id="employee-gender">
+
+                                        <label class="form-label">Gender:</label>
+                                        <!-- Radio buttons group -->
+                                        <div class="radio-group">
+                                            <input class="text-input" type="radio" id="male" name="gender" value="male"
+                                                required>
+                                            <label class="form-label" for="male">Male</label>
+
+                                            <input class="text-input" type="radio" id="female" name="gender"
+                                                value="female" required>
+                                            <label class="form-label" for="female">Female</label>
+
+                                            <input class="text-input" type="radio" id="other" name="gender"
+                                                value="other" required>
+                                            <label class="form-label" for="other">Other</label>
+
+
+                                        </div>
+                                        <!-- radio button group ends -->
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step3" style="display: none;">
+                                    <div class="form-element" id="employee-email">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input class="text-input" type="email" id="email" placeholder="Email"
+                                            name="Email" onkeydown="if(event.key==='Enter') validateEmail(event)">
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step4" style="display: none;">
+                                    <div class="form-element" id="employee-password">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input class="text-input" type="password" id="password" placeholder="Password"
+                                            name="password" onkeydown="if(event.key==='Enter') validatePassword(event)">
+                                        <p id="strength-msg" style="color: red;"></p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step5" style="display: none;">
+                                    <div class="form-element" id="employee-confirm">
+                                        <label class="form-label" for="confirmPassword">Confirm Password</label>
+                                        <input class="text-input" type="password" id="confirmPassword"
+                                            placeholder="Confirm Password" name="confirmPassword"
+                                            onkeydown="if(event.key==='Enter') validateConfirmPassword(event)">
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="step6" style="display: none;">
+                                    <div class="form-element" id="employee-contact">
+                                        <label class="form-label" for="contact">Contact No.</label>
+                                        <input type="tel" class="text-input" id="contact" pattern="[0-9]{10}" required
+                                            onkeydown="if(event.key==='Enter') validateContact(event)">
+
+                                    </div>
+                                </div>
+                                <!-- <div id="step7" style="display: none;"> -->
+                                <div class="form-element" style="display: none;">
+                                    <button id="submit-button">Register</button>
+                                </div>
+                                <!-- </div> -->
+                            </form>
+                        </div>
+                        <!--Add employee form ends-->
+                        <!-- employee image section -->
+                        <div class="elements-img">
+                            <img src="images/employee.png" alt="Employee Pic">
+                        </div>
+                        <!-- employee image section ends -->
+                    </div>
+
+                </section>
+                <!--Add employee section ends-->
+            </div>
+
+        </div>
+        <!-- employee collapsable ends -->
+
+        <!--Add Vechicle collapsable  section start-->
+        <div id="vehicle">
+            <input type="checkbox" name="section" id="vehicle-checkbox">
+            <label for="vehicle-checkbox" class="collapsible-label">Add Vehicle</label>
+            <div class="collapsible-content">
+                <!-- Add vehicle section starts -->
+                <section class="vehicle">
+                    <h2>
+                        <center>Add Vehicle</center>
+                    </h2>
+                    <div class="elements">
+                        <!-- vehicle  image section  -->
+                        <div class="elements-img">
+                            <img src="images/vehicle.png" alt="Vehicles">
+                        </div>
+                        <!-- vehicle image ends -->
+                        <!-- Add vehicle form starts -->
+                        <div class="elements-form">
+                            <form id="AddVehicle" class="form" action="#" method="post">
+                                <div class="form-element">
+                                    <label class="form-label" for="vehicleMake">Vehicle Make</label>
+                                    <input class="text-input" type="text" id="vehicleMake" name="vehicleMake"
+                                        placeholder="Vehicle Make" required>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="vehicleModel">Vehicle Model</label>
+                                    <input class="text-input" type="text" id="vehicleModel" name="vehicleModel"
+                                        placeholder="Vehicle Model" required>
+                                </div>
+                                <br>
+                                <!-- Drop down for vehicle type -->
+                                <div class="form-element">
+                                    <label class="form-label" for="type">Type:</label>
+                                    <select class="select-option" name="type" id="vehicle-type">
+                                        <option value="cycle">Cycle</option>
+                                        <option value="four-wheeler">Four-Wheeler</option>
+                                        <option value="motorCycle">Motor-Cycle</option>
+
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="vehicleNumber">Vehicle Number</label>
+                                    <input class="text-input" type="text" id="vehicleNumber"
+                                        placeholder="Vehicle Number" name="vehicleNumber">
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="employeeID">Employee ID</label>
+                                    <input class="text-input" type="text" id="employeeID" placeholder="Employee ID"
+                                        name="employeeID">
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="identification">Identification</label>
+                                    <textarea class="text-input" name="identification" id="identification" rows="5"
+                                        cols="40" placeholder="Color, mark, visible accessory etc." required></textarea>
+                                </div>
+                                <div class="form-element">
+                                    <button type="submit" class="submit-button">Register</button>
+                                </div>
+                            </form>
+                            <!--Add vehicle form ends-->
+                        </div>
+                    </div>
+
+                    <!--Add Vehicle Form-->
+
+                </section>
+            </div>
+        </div>
+        <!--Add vehicle section ends-->
+
+        <!-- Feedback collapser start -->
+        <div id="feedback">
+            <input type="checkbox" name="section" id="feedback-checkbox">
+            <label for="feedback-checkbox" class="collapsible-label">Add Feedback</label>
+            <div class="collapsible-content">
+                <!-- Add feedback section -->
+                <section class="feedback">
+                    <h2>
+                        <center>Give Feedback</center>
+                    </h2>
+                    <!--Add feedback Form-->
+                    <div class="elements">
+                        <div class="elements-form">
+                            <form id="addFeedBack" class="form" action="#" method="post">
+                                <div class="form-element">
+                                    <label class="form-label" for="name">Name:</label>
+                                    <input class="text-input" type="text" id="name" name="name" placeholder="Your name"
+                                        required>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="text-input" type="email" id="email-feed" placeholder="Email"
+                                        name="Email">
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="contact">Contact No.</label>
+                                    <input class="text-input" type="tel" id="contact-feed" pattern="[0-9]{10}" required>
+                                </div>
+                                <br>
+                                <div class="form-element">
+                                    <label class="form-label" for="remark">Your remark</label>
+                                    <textarea class="text-input" name="remark" id="remark" rows="5" cols="40"
+                                        placeholder="Please enter your remark" required></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                            <!--Add feedback form ends-->
+                        </div>
+                        <!-- Feedback image  -->
+                        <div class="elements-img">
+                            <img src="images/feedback.jpg" alt="Image" style=" object-fit: fill; width: 100%; height: 100%;">
+                        </div>
+                        <!-- image ends -->
+                    </div>
+
+
+                </section>
+                <!--feedback section ends-->
+            </div>
+        </div>
+        <!-- ends of feedback collapser -->
+        <div id="price">
+            <input type="checkbox" name="section" id="price-checkbox">
+            <label for="price-checkbox" class="collapsible-label">Pricing</label>
+            <div class="collapsible-content" id="price-content">
+                <section class="pricing pricing-container">
+                    <h2>
+                        <center>Pricing</center>
+                    </h2>
+                    <div class="pricing-section" id="pricing-section">
+                        <!-- Cycle price block  -->
+                        <div class="pricing-block" id="cycle">
+                            <h3>CYCLE</h3>
+                            <div class="price-circle">
+                                <img src="images/cycle.png" alt="cycle">
+                            </div>
+                            <div class="details">
+                                Rs.5 Daily<br>
+                                Rs.100 Monthly<br>
+                                Rs.500 Yearly
+                            </div>
+                            <a class="btn purchase" href="#">Purchase Now</a>
+                        </div>
+                        <!-- cycle block ends -->
+                        <!--two wheeler block   -->
+                        <div class="pricing-block" id="motorCycle">
+                            <h3>Motor Cycle</h3>
+                            <div class="price-circle">
+                                <img src="images/motorcycle.png" alt="motorcycle">
+                            </div>
+                            <div class="details">
+                                Rs.10 Daily<br>
+                                Rs.200 Monthly<br>
+                                Rs.1000 Yearly
+                            </div>
+                            <a class="btn purchase" href="#">Purchase Now</a>
+                        </div>
+                        <!-- two wheeler ends -->
+                        <!-- Four wheeler block -->
+                        <div class="pricing-block" id="four-wheeler">
+                            <h3>Four Wheelers</h3>
+                            <div class="price-circle">
+                                <img src="images/four-wheelers.jpg" alt="car">
+                            </div>
+                            <div class="details">
+                                Rs.20 Daily<br>
+                                Rs.500 Monthly<br>
+                                Rs.3500 Yearly
+                            </div>
+                            <a class="btn purchase" href="#">Purchase Now</a>
+                        </div>
+                        <!-- Four wheeler block end -->
+                    </div>
+                    <!-- End of pricing section -->
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- ends of collapser section -->
+
+    <!-- Pricing section start -->
+
+
+    <div id="selection" style="display:none;">
+        <h2>Select Plan & Currency Type</h2>
+        <select id="planSelect">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+        <select id="currencySelect">
+            <option value="USD">USD</option>
+            <option value="YEN">YEN</option>
+        </select>
+        <br>
+        <button class="btn" id="get-pass">Get Pass</button>
+        <h3 id="priceDisplay" style="color: black;"></h3>
+    </div>
+    <!-- Footer section starts -->
+    <footer class="footer">
+        <!-- Logo section -->
+        <div class="footer-left">
+            <div class="logo"><span class="logo-first">meta</span><span class="logo-second">park</span> </div>
+        </div>
+        <!-- end logo section -->
+        <!-- links section -->
+        <div class="footer-center">
+            <ul class="footer-nav">
+                <li><a href="#employee">Add Employee</a></li>
+                <li><a href="#vehicle">Add Vehicle</a></li>
+                <li><a href="#feedback">Add Feedback</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </div>
+        <!-- end of link section -->
+        <!-- social media icons  -->
+        <div class="footer-right">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+        <!-- end media icons -->
+    </footer>
+    <!-- end of the footer section -->
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
