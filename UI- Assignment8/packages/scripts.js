@@ -1,5 +1,5 @@
 // Step 1: Validate Full Name
-const validateName = () => {
+const validateName = (event) => {
     if (event) event.preventDefault();
     const name = document.getElementById('fullname').value.trim();
     const nameRegex = /^[A-Za-z ]{3,}$/;
@@ -35,7 +35,7 @@ const validateGender = () => {
 };
 
 // Step 3: Validate Email
-const validateEmail = () => {
+const validateEmail = (event) => {
     if (event) event.preventDefault();
     const email = document.getElementById('email').value.trim();
     if (!email.includes("@")) {
@@ -49,7 +49,7 @@ const validateEmail = () => {
 };
 
 // Step 4: Validate Password
-const validatePassword = () => {
+const validatePassword = (event) => {
     if (event) event.preventDefault();
     const password = document.getElementById('password').value;
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{9,}$/;
@@ -64,7 +64,7 @@ const validatePassword = () => {
 };
 
 // Step 5: Confirm Password
-const validateConfirmPassword = () => {
+const validateConfirmPassword = (event) => {
     if (event) event.preventDefault();
     const pwd = document.getElementById('password').value;
     const cpwd = document.getElementById('confirmPassword').value;
@@ -79,7 +79,7 @@ const validateConfirmPassword = () => {
 };
 
 // Step 6: Validate Contact
-const validateContact = () => {
+const validateContact = (event) => {
     if (event) event.preventDefault();
     const contact = document.getElementById('contact').value.trim();
     const contactRegex = /^[0-9]{10}$/;
