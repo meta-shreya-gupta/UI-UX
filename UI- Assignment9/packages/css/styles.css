@@ -1,0 +1,446 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    overflow-x: hidden;
+}
+
+.logo {
+    text-align: left;
+    display: inline;
+    font-size: 45px;
+}
+
+.logo-first {
+    color: white;
+}
+
+.logo-second {
+    color: blue;
+}
+
+.navbar {
+    width: 95%;
+    background: rgb(10, 160, 230);
+    height: auto;
+    border: 1px solid black;
+    text-align: right;
+    border-radius: 20px;
+    padding: 5px 25px;
+    box-shadow: 0 4px 10px gray;
+    position: fixed;
+}
+
+.navdiv {
+    align-items: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navlist {
+    justify-content: space-between;
+    /*to align items with some spaces*/
+}
+
+.navbarlist {
+    list-style: none;
+    /*to remove dots from lists*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarlist li {
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.navbarlist li :hover {
+    color: yellow;
+    font-size: 22px;
+    transition: font-size 0.5s;
+}
+
+.navbarlist a {
+    text-decoration: none;
+    /*to remove underline below links*/
+    color: white;
+}
+
+.message h1 {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.collapsible-section {
+    width: 90%;
+    margin: 150px auto;
+
+}
+
+.collapsible-section input[type="checkbox"] {
+    display: none;
+}
+
+.collapsible-label {
+    display: block;
+    background-color: #032b5f;
+    color: white;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px grey;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border: 2px solid white;
+
+}
+
+.collapsible-label:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3 ease;
+    padding: 0 16px;
+    border-radius: 0 0 8px 8px;
+}
+
+input[type="checkbox"]:checked+.collapsible-label+.collapsible-content {
+    max-height: 1000px;
+    padding: 20px;
+}
+
+/* collapsable component ends here */
+input.valid {
+    border: 2px solid green;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+/* Add employee styling starts */
+.employee {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 600px;
+
+}
+
+#vehicle {
+    display: none;
+}
+
+.vehicle {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 700px;
+
+}
+
+/* add vehicle ends here */
+/* add feedback starts */
+.feedback {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 550px;
+}
+
+/* end of add feddback */
+h2 {
+    text-align: center;
+    color: #032b5f;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+/* Styling of the form elements starts */
+.elements {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    height: 350px;
+}
+
+.elements-form {
+    width: 50%;
+}
+
+/* styling of the image added aside of the forms */
+.elements-img {
+    width: 50%;
+    height: 100%;
+}
+
+.elements-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: max-content;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* image styling ends here */
+/* form radio buttons styling */
+.form-element .radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ends radio button */
+
+.elements-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* select option for vehicle type  */
+.select-option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.text-input,
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    /* Removes the default focus border */
+    box-shadow: none;
+    /* Ensures no shadow appears */
+    /* Optional: Makes the border invisible */
+}
+
+/* Submit button */
+button[type="submit"] {
+    margin-top: 35px;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* form styling ends here */
+
+#feedback {
+    display: none;
+}
+
+#price {
+    display: none;
+}
+
+.pricing {
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px grey;
+    height: 400px;
+}
+
+.pricing-container {
+    width: 100%;
+
+}
+
+.pricing-block {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.pricing-block:hover {
+    width: 40%;
+    border: 3px solid #032b5f;
+}
+
+.pricing-block .btn:hover {
+    background-color: #0056b3;
+}
+
+/* pricing section ends here */
+
+/* Footer Section CSS */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #032b5f;
+    color: #fff;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.footer-left .logo {
+    height: 40px;
+}
+
+.footer-center .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-center .footer-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-right a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-right a:hover,
+.footer-center .footer-nav li a:hover {
+    color: yellow;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #125688;
+    color: white;
+}
+
+.fa-twitter {
+    background: #125688;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #125688;
+    color: white;
+}
+
+/* footer section ends here ends */
+.pricing-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: auto;
+}
+
+.pricing-block {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+
+}
+
+.pricing-block h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.price-circle {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.details {
+    margin: 10px 0;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
