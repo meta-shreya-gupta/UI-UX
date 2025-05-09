@@ -1,0 +1,20 @@
+.task-card {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.high {
+    background-color: #ff4c4c; /* Red for High priority */
+    color: white;
+}
+
+.medium {
+    background-color: #f4d03f; /* Yellow for Medium priority */
+}
+
+.low {
+    background-color: #82e0aa; /* Green for Low priority */
+}
