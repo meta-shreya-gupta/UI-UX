@@ -49,9 +49,9 @@ export default function NewTaskModal({ showModal, setShowModal, addTask, initial
                     <option value="Low">Low</option>
                 </select>
 
-                <button type="submit" style={{ color: "white",backgroundColor:"green", fontSize: "20px", fontWeight: "bold",  }}>
+                <button type="submit" className='buttons button1'>
 {initialTask ? "Update Task" : "Create Task"}</button>
-                <button type="button" style={{ color: "white",backgroundColor:"red", fontSize: "20px", fontWeight: "bold",  }} onClick={() => setShowModal(false)}>Cancel</button>
+                <button type="button" className='button2 buttons' onClick={() => setShowModal(false)}>Cancel</button>
             </form>
         </div>
     );

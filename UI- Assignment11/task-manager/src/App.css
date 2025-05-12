@@ -12,3 +12,8 @@
   height: 150px;
   background-color: #f4f4f4;
 }
+.add-task-button{
+  color: white;
+  background-color: #40E0D0;  
+  font-size: 15px;
+}

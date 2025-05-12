@@ -44,8 +44,7 @@ function App() {
             <div className='App'>
                 <div className='main-header'>
                     <Header />
-                    <button onClick={() => setShowModal(true)} className="add-task-button" style={{ color: "white", backgroundColor:"#40E0D0",  fontSize:"15px"}}>
-
+                    <button onClick={() => setShowModal(true)} className="add-task-button">
                         Add Task
                     </button>
                 </div>
