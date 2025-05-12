@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NewTaskModal.css';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function NewTaskModal({ showModal, setShowModal , addTask}) {
+export default function NewTaskModal({ showModal, setShowModal, addTask, initialTask }) {
     const [task, setTask] = useState({
+        id: uuidv4(),
         title: '',
         description: '',
-        status: 'New', // Default status, not shown in UI
-        creationDate: new Date().toISOString().split('T')[0], // Default date, not shown in UI
-        completionDate: '', // Will be used later but not shown
-        priority: 'Medium' // Default priority
+        status: 'New',
+        creationDate: new Date().toISOString().split('T')[0],
+        completionDate: '',
+        priority: 'Medium'
     });
+
+    useEffect(() => {
+        if (initialTask) {
+            setTask(initialTask);
+        }
+    }, [initialTask]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,20 +27,17 @@ export default function NewTaskModal({ showModal, setShowModal , addTask}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         addTask(task);
-        setShowModal(false); // Close modal after submission
+        setShowModal(false);
     };
-    
 
-    if (!showModal) return null; // If modal isn't open, return nothing.
+    if (!showModal) return null;
 
     return (
         <div className='component'>
-            <h2>Create New Task</h2>
+            <h2>{initialTask ? "Edit Task" : "Create New Task"}</h2>
             <form onSubmit={handleSubmit} className='task-form'>
-
                 <label>Title:</label>
-                <input type="text" name="title" value={task.title} onChange={handleChange} required 
-                    className='title' />
+                <input type="text" name="title" value={task.title} onChange={handleChange} required className='title' />
 
                 <label>Description:</label>
                 <textarea name="description" value={task.description} onChange={handleChange} required className='description' />
@@ -44,14 +49,9 @@ export default function NewTaskModal({ showModal, setShowModal , addTask}) {
                     <option value="Low">Low</option>
                 </select>
 
-                <div className='btn'>
-                    <button type="submit" onClick={() => setShowModal(true)} className="add-task-button">
-                        Create Task
-                    </button>
-                    <button type="button" onClick={() => setShowModal(false)} className='cancel'>
-                        Cancel
-                    </button>
-                </div>
+                <button type="submit" style={{ color: "white",backgroundColor:"green", fontSize: "20px", fontWeight: "bold",  }}>
+{initialTask ? "Update Task" : "Create Task"}</button>
+                <button type="button" style={{ color: "white",backgroundColor:"red", fontSize: "20px", fontWeight: "bold",  }} onClick={() => setShowModal(false)}>Cancel</button>
             </form>
         </div>
     );

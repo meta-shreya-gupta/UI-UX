@@ -1,19 +1,23 @@
 .board {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
 }
 
 .column {
+    display: flex;
+    flex-direction: column;
     width: 30%;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    position: sticky;
+    height: 500px; /* Set a fixed height */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto; /* Enables scrolling within each column */
 }
+
 h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+    margin: 0;
 }
