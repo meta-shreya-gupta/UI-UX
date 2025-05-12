@@ -54,7 +54,7 @@ function App() {
                     <NewTaskModal showModal={showModal} setShowModal={setShowModal} addTask={addTask} />
                 )}
                 {editingTask && (
-                    <NewTaskModal showModal={true} setShowModal={setShowModal} addTask={editTask} initialTask={editingTask} />
+                    <NewTaskModal showModal={true} setShowModal={setShowModal} addTask={editTask} initialTask={editingTask} onCancel={() => setEditingTask(null)}/>
                 )}
 
                 <TaskBoard tasks={tasks} setTasks={setTasks} onEdit={setEditingTask} onDelete={deleteTask} />

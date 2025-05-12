@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './NewTaskModal.css';
 import { v4 as uuidv4 } from 'uuid';
 
-export default function NewTaskModal({ showModal, setShowModal, addTask, initialTask }) {
+export default function NewTaskModal({ showModal, setShowModal, addTask, initialTask, onCancel }) {
     const [task, setTask] = useState({
         id: uuidv4(),
         title: '',
@@ -51,7 +51,7 @@ export default function NewTaskModal({ showModal, setShowModal, addTask, initial
 
                 <button type="submit" className='buttons button1'>
 {initialTask ? "Update Task" : "Create Task"}</button>
-                <button type="button" className='button2 buttons' onClick={() => setShowModal(false)}>Cancel</button>
+                <button type="button" className='button2 buttons' onClick={() => {setShowModal(false); onCancel();}}>Cancel</button>
             </form>
         </div>
     );
