@@ -1,0 +1,23 @@
+.board {
+    display: flex;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 500px; /* Set a fixed height */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto; /* Enables scrolling within each column */
+}
+
+h1 {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+    margin: 0;
+}
